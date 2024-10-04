@@ -1,5 +1,3 @@
-
-
 # BMR Calculator and Calorie Tracker
 
 This Python project helps you calculate your Basal Metabolic Rate (BMR) using the Mifflin-St Jeor equation and keep track of your daily calorie intake by logging it in a CSV file. The application allows users to store daily calorie consumption and retrieve historical data based on the date.
@@ -15,13 +13,63 @@ This Python project helps you calculate your Basal Metabolic Rate (BMR) using th
 ## Requirements
 
 - Python 3.x
-- Libraries: `csv`, `datetime`, `os`
+- Libraries: `Flask`, `csv`, `datetime`, `os`, `re`
 
-## How to Use
+## Application Implementation
 
-1. **Run the Program**: The script will prompt you to enter your weight, height, age, gender, and daily calorie consumption.
-2. **Logging Calories**: After calculating your BMR, the program stores today's date and the calories consumed in a CSV file (`calories_data.csv`). If the file doesn't exist, it will create one.
-3. **Search Calories by Date**: You can search for your calorie intake for any given date and get the total calories consumed for that day.
+This project is implemented as a Flask web application. The user interface allows users to enter their weight, height, age, gender, and daily calorie consumption through web forms. 
+
+### Application Structure
+
+- **index.html**: Main form for entering weight, height, age, gender, and calories.
+- **search.html**: Form for searching calorie entries by date.
+- **search_results.html**: Displays search results and allows users to navigate back to the home page or search for another date.
+- **global.css**: Contains all the styling for the HTML pages.
+
+### How to Run the Flask App
+
+1. **Set Up Your Environment**: 
+   - Ensure that you have Python 3.x installed on your system.
+   - Install the required libraries using pip:
+
+     ```bash
+     pip install Flask
+     ```
+
+2. **Clone or Download the Repository**: 
+   - Clone this repository or download the source code to your local machine.
+
+3. **Navigate to Your Project Directory**: 
+   - Open your command line interface and change to the directory where your Flask application file (e.g., `app.py`) is located:
+
+     ```bash
+     cd path/to/your/project
+     ```
+
+4. **Set Environment Variables**:
+   - Set the `FLASK_APP` environment variable to your application file. For example:
+
+     - **On Windows (Command Prompt)**:
+
+       ```bash
+       set FLASK_APP=app.py
+       ```
+
+     - **On macOS/Linux**:
+
+       ```bash
+       export FLASK_APP=app.py
+       ```
+
+5. **Run the Flask Application**:
+   - Execute the following command:
+
+     ```bash
+     flask run
+     ```
+
+6. **Access Your Application**:
+   - Open a web browser and go to `http://127.0.0.1:5000/` to view the application.
 
 ### BMR Calculation
 
@@ -43,7 +91,7 @@ The CSV file (`calories_data.csv`) stores data in the following format:
 ### Example Usage
 
 1. Run the script and input the required details:
-    ```python
+    ```plaintext
     Enter your weight in kgs: 70
     Enter your height in cm: 175
     Enter your age in years: 25
@@ -52,7 +100,7 @@ The CSV file (`calories_data.csv`) stores data in the following format:
     ```
 
 2. To search for a specific date:
-    ```python
+    ```plaintext
     Enter the date you want to search: 01-10-2024
     ```
     The program will display the total calories consumed on that date.
@@ -84,5 +132,3 @@ Retrieves the total calorie count for a given date.
 
 - If the CSV file doesn't exist, the program will create it.
 - If the user enters an invalid gender, the program raises a `ValueError`.
-
-
