@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Entry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Tracker</h1>
+        <form method="POST">
+            <label for="weight">Enter your weight (kg):</label>
+            <input type="number" name="weight" id="weight" required>
+            
+            <label for="height">Enter your height (cm):</label>
+            <input type="number" name="height" id="height" required>
+            
+            <label for="age">Enter your age:</label>
+            <input type="number" name="age" id="age" required>
+            
+            <label for="gender">Enter your gender (male/female):</label>
+            <input type="text" name="gender" id="gender" required>
+            
+            <label for="calories">Enter the calories consumed today:</label>
+            <input type="number" name="calories" id="calories" required>
+            
+            <div class="button-container">
+                <!-- Submit button with blue color -->
+                <button type="submit">Submit</button>
+                
+                <!-- Navigate to search page button -->
+                <a href="{{ url_for('search') }}">
+                    <button type="button" class="btn-secondary">Go to Search</button>
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

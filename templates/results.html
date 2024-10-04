@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Tracker Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Tracker Results</h1>
+        
+        <div class="result-box">
+            <h2>Results</h2>
+            <p><strong>BMR:</strong> {{ bmr }} kcal/day</p>
+            <p><strong>Total Calories Consumed:</strong> {{ calories }} kcal</p>
+        </div>
+        
+        <div class="button-container">
+            <form action="{{ url_for('index') }}" method="GET" style="flex: 2;">
+                <button type="submit">Enter New Data</button>
+            </form>
+            <a href="{{ url_for('search') }}" style="text-decoration: none;">
+                <button type="button" class="btn-secondary">Go to Search</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

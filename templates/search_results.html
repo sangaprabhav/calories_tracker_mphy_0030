@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='global.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calorie Tracker</h1>
+
+        {% if total_calories %}
+            <div class="result-box">
+                <h2>Search Result for {{ search_date }}</h2>
+                <p><strong>Total Calories Consumed:</strong> {{ total_calories }} kcal</p>
+            </div>
+        {% else %}
+            <div class="no-result">
+                <p>No entries found for {{ search_date }}.</p>
+            </div>
+        {% endif %}
+        
+        <div class="button-container">
+            <form action="{{ url_for('search') }}" method="GET" style="flex: 2;">
+                <button type="submit">Search Another Date</button>
+            </form>
+            <a href="{{ url_for('index') }}" style="text-decoration: none;">
+                <button type="button" class="btn-secondary">Back to Home</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
