@@ -113,8 +113,8 @@ Returns today's date in a `datetime` object.
 ### `date_to_str(date)`
 Converts a date object to a string in the format `dd-mm-yyyy`.
 
-### `str_to_date(str)`
-Converts a string back to a `datetime.date` object.
+### `is_valid_date_format(date_str)`
+Verifies that the inputted date is in the correct format 
 
 ### `bmr_mifflin_st_jeor(weight_kg, height_cm, age, gender)`
 Calculates BMR based on the Mifflin-St Jeor formula.
