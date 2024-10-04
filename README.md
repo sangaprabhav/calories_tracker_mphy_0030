@@ -9,6 +9,7 @@ This Python project helps you calculate your Basal Metabolic Rate (BMR) using th
 - Append data to an existing CSV file (`calories_data.csv`).
 - Search for calorie entries by date.
 - Calculate the total calories consumed for any specific date.
+<img width="1138" alt="Screenshot 2024-10-04 at 19 11 33" src="https://github.com/user-attachments/assets/194ae864-6495-4baf-ad70-ccf630a06a18">
 
 ## Requirements
 
