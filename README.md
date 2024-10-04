@@ -24,6 +24,7 @@ This project is implemented as a Flask web application. The user interface allow
 - **index.html**: Main form for entering weight, height, age, gender, and calories.
 - **search.html**: Form for searching calorie entries by date.
 - **search_results.html**: Displays search results and allows users to navigate back to the home page or search for another date.
+- **results.html**: Displays BMR calculation and allows users to enter new data or search for another date
 - **global.css**: Contains all the styling for the HTML pages.
 
 ### How to Run the Flask App
