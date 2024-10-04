@@ -89,23 +89,6 @@ The CSV file (`calories_data.csv`) stores data in the following format:
 | 01-10-2024 | 1800     |
 | 02-10-2024 | 2000     |
 
-### Example Usage
-
-1. Run the script and input the required details:
-    ```plaintext
-    Enter your weight in kgs: 70
-    Enter your height in cm: 175
-    Enter your age in years: 25
-    Enter your gender (male/female): male
-    Enter the number of calories you consumed today: 2200
-    ```
-
-2. To search for a specific date:
-    ```plaintext
-    Enter the date you want to search: 01-10-2024
-    ```
-    The program will display the total calories consumed on that date.
-
 ## Functions
 
 ### `get_date()`
