@@ -85,6 +85,4 @@ Retrieves the total calorie count for a given date.
 - If the CSV file doesn't exist, the program will create it.
 - If the user enters an invalid gender, the program raises a `ValueError`.
 
----
 
-You can customize the README as needed based on further additions or changes in the project.
